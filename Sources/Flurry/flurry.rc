@@ -1,0 +1,281 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#include <scrnsave.h>
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP                  "About.bmp"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#include <scrnsave.h>\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+DLG_SCRNSAVECONFIGURE DIALOGEX 0, 0, 271, 255
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Flurry Configuration"
+FONT 9, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    GROUPBOX        "Flurry appearance",IDC_STATIC,7,7,194,57
+    LTEXT           "Choose your flurry:",IDC_STATIC,16,18,111,8
+    COMBOBOX        IDC_FLURRY,16,29,179,95,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Edit",IDC_FLURRY_EDIT,110,46,40,14,WS_DISABLED
+    GROUPBOX        "Multi-monitor options",IDC_STATIC,7,70,194,53
+    CONTROL         "One flurry, covering entire desktop",IDC_POSITION_DESKTOP,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,16,81,151,10
+    CONTROL         "One flurry, on the primary monitor only",IDC_POSITION_PRIMARY,
+                    "Button",BS_AUTORADIOBUTTON,16,94,160,10
+    CONTROL         "A new flurry on each monitor",IDC_POSITION_PER,"Button",BS_AUTORADIOBUTTON,16,108,122,10
+    PUSHBUTTON      "Assign...",IDC_POSITION_PER_CONFIGURE,153,106,41,13,WS_DISABLED
+    GROUPBOX        "Rendering options",IDC_STATIC,7,129,194,53
+    CONTROL         "&Single buffered (fast, may tear)",IDC_DOUBLE_BUFFER_NONE,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,16,142,175,10
+    CONTROL         "&Lazy double buffering (fast, may flicker)",IDC_DOUBLE_BUFFER_OPTIMISTIC,
+                    "Button",BS_AUTORADIOBUTTON,16,154,176,10
+    CONTROL         "Accurate &double buffering (may be slow)",IDC_DOUBLE_BUFFER_PARANOID,
+                    "Button",BS_AUTORADIOBUTTON,16,166,176,10
+    DEFPUSHBUTTON   "O&K",IDOK,211,11,54,14
+    PUSHBUTTON      "&Preview",IDC_TEST,210,53,54,14
+    PUSHBUTTON      "&About",IDC_ABOUT,210,74,54,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,210,32,54,14
+    GROUPBOX        "Advanced",IDC_ADVANCED,7,188,194,60
+    CONTROL         "",IDC_SHRINK,"msctls_trackbar32",TBS_AUTOTICKS | TBS_TOOLTIPS | WS_TABSTOP,109,197,84,19
+    LTEXT           "Shrink window size (%)",IDC_SHRINKTEXT,16,201,75,8
+    CONTROL         "Show &FPS Indicator (works only in single buffer mode)",IDC_FPS_INDICATOR,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,233,182,10
+    CONTROL         "Block Mode",IDC_BLOCK_MODE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,218,51,10
+    CONTROL         "Whiteout Mode",IDC_WHITEOUT_MODE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,113,218,65,10
+    PUSHBUTTON      "Delete",IDC_FLURRY_DELETE,155,46,40,14,WS_DISABLED
+    PUSHBUTTON      "New",IDC_FLURRY_NEW,66,46,40,14
+END
+
+DLG_CREDITS DIALOGEX 0, 0, 210, 154
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Flurry credits"
+FONT 8, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "O&K",IDOK,153,133,50,14
+    LTEXT           "Brian Wade wrote Seraphim for Windows. I never saw it, but it must have been cool.",IDC_STATIC,7,7,196,17
+    LTEXT           "Calum Robinson turned Seraphim into Flurry for Mac OS X, which I have seen and can vouch for: it's cool.",IDC_STATIC,7,28,196,17
+    LTEXT           "Matt Ginzton turned that into Flurry for Windows. You're about to run it; you decide for yourself if it's cool.",IDC_STATIC,7,52,196,17
+    LTEXT           "Flurry uses OpenGL. Thanks to OpenGL, the same core Flurry code runs on OS X, Windows, and the X Window System. OpenGL is definitely cool.",IDC_STATIC,7,105,196,28
+    LTEXT           "Julien Templier corrected registry reading bugs, got rid of deprecated function calls and added a new about dialog. He also updated the configuration UI and added a flurry editor.",IDC_STATIC,7,75,196,27
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 200, 254
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "About Flurry"
+FONT 8, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    LTEXT           "Build:",IDC_STATIC,6,212,26,8
+    LTEXT           " . . . ",IDC_ABOUT_VERSION_BUILD,45,212,44,8
+    LTEXT           "Compiled:",IDC_STATIC,6,224,37,8
+    LTEXT           "(unknown)",IDC_ABOUT_VERSION_COMPILE,45,224,91,8
+    DEFPUSHBUTTON   "O&K",IDCANCEL,144,235,50,14
+    CONTROL         104,IDC_ABOUTPIC,"Static",SS_BITMAP,0,0,200,209
+    PUSHBUTTON      "&Credits",IDC_CREDITS,89,235,50,14
+END
+
+DLG_EDITOR DIALOGEX 0, 0, 317, 206
+STYLE DS_SYSMODAL | DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Flurry Editor"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,205,185,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,260,185,50,14
+    LTEXT           "Flurry Name",IDC_TEXT_NAME,8,9,40,8
+    EDITTEXT        IDC_NAME,59,7,251,13,ES_AUTOHSCROLL
+    GROUPBOX        "Stream",IDC_BOX_STREAM,7,100,303,57
+    LTEXT           "Streams",IDC_TEXT_STREAMS,13,113,27,8
+    CONTROL         "",IDC_STREAM_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,7,25,303,71
+    LTEXT           "Color",IDC_TEXT_COLOR,72,113,18,8
+    LTEXT           "Thickness",IDC_TEXT_THICKNESS,174,113,32,8
+    LTEXT           "Speed",IDC_TEXT_SPEED,249,113,21,8
+    PUSHBUTTON      "Cancel",IDC_BUTTON_REMOVE_CANCEL,255,136,50,14,WS_DISABLED
+    PUSHBUTTON      "Add",IDC_BUTTON_ADD_EDIT,200,136,50,14,WS_DISABLED
+    LTEXT           "Template Code",IDC_TEXT_TEMPLATE,8,167,49,8
+    EDITTEXT        IDC_TEMPLATE,59,164,251,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "Preview",IDC_BUTTON_PREVIEW,7,185,50,14,NOT WS_VISIBLE | WS_DISABLED
+    COMBOBOX        IDC_COLOR,93,110,71,54,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_THICKNESS,208,110,32,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SPEED,272,110,32,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_STREAMS,42,110,21,13,ES_AUTOHSCROLL | ES_NUMBER
+END
+
+DLG_ASSIGN DIALOGEX 0, 0, 191, 73
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Assign..."
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,80,52,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,134,52,50,14
+    COMBOBOX        IDC_MONITOR_LIST,46,7,138,39,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Monitor",IDC_TEXT_MONITOR,7,9,25,8
+    LTEXT           "Flurry",IDC_TEXT_FLURRY,7,31,20,8
+    COMBOBOX        IDC_FLURRY_LIST,46,28,138,41,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    DLG_SCRNSAVECONFIGURE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 264
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 248
+    END
+
+    DLG_CREDITS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 193
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 247
+    END
+
+    DLG_EDITOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 199
+    END
+
+    DLG_ASSIGN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 184
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 66
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+ID_APP                  ICON                    "flurry.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,3,1,0
+ PRODUCTVERSION 1,3,1,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x29L
+#else
+ FILEFLAGS 0x28L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Flurry, everyone's favorite ScreenSaver, now for Windows..."
+            VALUE "FileDescription", "Flurry ScreenSaver for Windows"
+            VALUE "FileVersion", "1.3"
+            VALUE "InternalName", "Flurry"
+            VALUE "LegalCopyright", "©2003 Matt Ginzton, ©2005-2008 Julien Templier"
+            VALUE "OriginalFilename", "Flurry.scr"
+            VALUE "ProductName", "Flurry for Windows"
+            VALUE "ProductVersion", "1.3"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_DESCRIPTION         "Flurry"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+

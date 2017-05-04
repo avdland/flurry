@@ -1,0 +1,8 @@
+NAME	Flurry.SCR
+
+;DESCRIPTION	'Flurry Screensaver for Windows'
+
+EXPORTS
+	ScreenSaverProc
+	ScreenSaverConfigureDialog
+	RegisterDialogClasses
