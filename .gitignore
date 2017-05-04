@@ -1,3 +1,11 @@
-Flurry.VC.db
-Flurry.VC.VC.opendb
-
+# Ignore various files created by visual studio/msbuild
+*.ipch
+*.opensdf
+*.sdf
+*.suo
+*.vcxproj.user
+*.obj
+*.tlog
+*.VC.opendb
+*.VC.db
+.vs/
