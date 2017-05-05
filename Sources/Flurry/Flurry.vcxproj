@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{880FCA66-957D-40E1-9E97-3A23DFF475E2}</ProjectGuid>
     <RootNamespace>Flurry</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -47,6 +48,8 @@
     <OutDir>$(SolutionDir)\Builds\$(Configuration)\$(ProjectName)\</OutDir>
     <IntDir>$(SolutionDir)\Builds\$(Configuration)\$(ProjectName)\Intermediate\</IntDir>
     <LinkIncremental>true</LinkIncremental>
+    <TargetExt>.scr</TargetExt>
+    <EmbedManifest>true</EmbedManifest>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)\Builds\$(Configuration)\$(ProjectName)\</OutDir>
@@ -104,6 +107,9 @@
       <DataExecutionPrevention />
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
+    <Manifest>
+      <EnableDpiAwareness>PerMonitorHighDPIAware</EnableDpiAwareness>
+    </Manifest>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <PreBuildEvent>
